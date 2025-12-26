@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { AuthForm } from "./auth-form";
 
 type AuthPageProps = {
@@ -32,7 +33,9 @@ export function AuthPage({
           </div>
         </div>
 
-        <AuthForm mode={mode} ctaLabel={ctaLabel} />
+        <Suspense fallback={<div className="mt-8 text-sm text-slate-500">Загружаем форму…</div>}>
+          <AuthForm mode={mode} ctaLabel={ctaLabel} />
+        </Suspense>
 
         <div className="mt-6 grid gap-4 rounded-2xl bg-slate-50 p-4 text-sm text-slate-600">
           <div className="flex items-start gap-3">
