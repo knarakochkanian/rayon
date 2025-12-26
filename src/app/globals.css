@@ -24,3 +24,45 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer components {
+  .page-shell {
+    @apply min-h-screen bg-slate-50 text-slate-900;
+  }
+
+  .card-strong {
+    @apply rounded-3xl border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.08)];
+  }
+
+  .card-soft {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-md shadow-slate-200/40;
+  }
+
+  .pill-muted {
+    @apply rounded-full px-3 py-1 text-xs font-semibold bg-slate-100 text-slate-700;
+  }
+
+  .pill-dark {
+    @apply rounded-full px-3 py-1 text-xs font-semibold bg-slate-900 text-white;
+  }
+
+  .pill-emerald {
+    @apply rounded-full px-3 py-1 text-xs font-semibold bg-emerald-100 text-emerald-700;
+  }
+
+  .pill-rose {
+    @apply rounded-full px-3 py-1 text-xs font-semibold bg-rose-100 text-rose-700;
+  }
+
+  .input-shell {
+    @apply flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-600;
+  }
+
+  .section-grid {
+    @apply mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10;
+  }
+
+  .muted {
+    @apply text-sm text-slate-500;
+  }
+}
